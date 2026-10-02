@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Demo portfolio landing page illustrating a structured frontend review: hero, skills, projects, contact, plus a junior web-dev career checklist." />
+  <title>Portfolio Review Demo — Frontend Structure</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <p class="logo" aria-label="Demo brand">Frontend Review Demo</p>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#career">Career path</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Mentor review pattern</p>
+          <h1 id="hero-heading">Clear sections. Accessible markup. Career-ready portfolio.</h1>
+          <p class="lead">
+            This static page shows how a junior web developer’s landing page can be structured
+            for a live 1:1 review: semantics, UX hierarchy, responsive layout, and a practical
+            checklist for growing into front-end roles.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#career">View career checklist</a>
+            <a class="btn btn-ghost" href="#projects">See project cards</a>
+          </div>
+        </div>
+        <aside class="review-card" aria-labelledby="review-heading">
+          <h2 id="review-heading">Live review focus</h2>
+          <ul>
+            <li><strong>UX</strong> — visual hierarchy, CTAs, whitespace</li>
+            <li><strong>Semantics</strong> — landmarks, headings, labels</li>
+            <li><strong>Performance</strong> — lean CSS/JS, no build step</li>
+            <li><strong>Responsive</strong> — mobile-first, readable type</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="skills" class="section" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 id="skills-heading">Skills section pattern</h2>
+        <p class="section-intro">
+          Group skills by intent (not buzzword lists). In a session we’d refine wording,
+          evidence links, and which skills belong on the homepage vs. a full résumé.
+        </p>
+        <ul class="skill-grid">
+          <li class="skill-card">
+            <h3>Front-end foundations</h3>
+            <p>HTML semantics, CSS layout (Flex/Grid), accessible forms, responsive images.</p>
+          </li>
+          <li class="skill-card">
+            <h3>Web design craft</h3>
+            <p>Typography, color contrast, spacing systems, component consistency.</p>
+          </li>
+          <li class="skill-card">
+            <h3>Project delivery</h3>
+            <p>Scope, milestones, feedback loops, shipping a polished personal site.</p>
+          </li>
+          <li class="skill-card">
+            <h3>Growing stack</h3>
+            <p>Progressive JS, component thinking, version control, deploy basics.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-alt" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading">Projects section pattern</h2>
+        <p class="section-intro">
+          Each card should answer: what problem, what you built, what you learned.
+          We’d tighten copy and add measurable outcomes in a review.
+        </p>
+        <div class="project-grid">
+          <article class="project-card">
+            <h3>Landing page redesign</h3>
+            <p>Rebuilt hero + nav for clearer CTAs and mobile readability.</p>
+            <p class="meta">HTML · CSS · accessibility pass</p>
+          </article>
+          <article class="project-card">
+            <h3>Portfolio case study</h3>
+            <p>Documented process: wireframe → polish → deploy on static hosting.</p>
+            <p class="meta">UX writing · responsive layout</p>
+          </article>
+          <article class="project-card">
+            <h3>Interactive checklist</h3>
+            <p>Small JS feature that tracks career milestones without a framework.</p>
+            <p class="meta">Vanilla JS · local state</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="career" class="section" aria-labelledby="career-heading">
+      <div class="container">
+        <h2 id="career-heading">Junior web-dev career path checklist</h2>
+        <p class="section-intro">
+          Use this as a living roadmap. Check items off as you practice; we’ll prioritize
+          what to tackle next based on your current site and goals.
+        </p>
+        <form id="career-form" class="checklist" aria-describedby="career-hint">
+          <p id="career-hint" class="hint">Progress is saved in this browser only (demo).</p>
+          <label><input type="checkbox" name="item" value="html-css" /> Solid HTML/CSS: semantic pages, Flexbox/Grid, responsive breakpoints</label>
+          <label><input type="checkbox" name="item" value="a11y" /> Accessibility basics: keyboard nav, contrast, alt text, landmark roles</label>
+          <label><input type="checkbox" name="item" value="js" /> Practical JS: DOM updates, events, small interactive UI without a framework</label>
+          <label><input type="checkbox" name="item" value="portfolio" /> Public portfolio with 2–3 projects and clear case-study writeups</label>
+          <label><input type="checkbox" name="item" value="git" /> Git + GitHub: clean commits, README, deploy a static site (Pages / Netlify)</label>
+          <label><input type="checkbox" name="item" value="design" /> Design sense: type scale, spacing, consistent components, mobile-first polish</label>
+          <label><input type="checkbox" name="item" value="pm" /> Light project management: scope a feature, estimate, ship in small increments</label>
+          <label><input type="checkbox" name="item" value="network" /> Career habits: apply weekly, share work, ask for feedback, track interviews</label>
+        </form>
+        <p class="progress" aria-live="polite"><span id="progress-text">0 of 8 checked</span></p>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt" aria-labelledby="contact-heading">
+      <div class="container contact-block">
+        <h2 id="contact-heading">Contact / next step</h2>
+        <p>
+          Ready for a structured review of your site and a personalized learning plan?
+          Book a 1:1 on Codementor — first session can focus on UX, semantics, performance,
+          and a concrete career roadmap.
+        </p>
+        <a class="btn btn-primary" href="https://www.codementor.io/@morosanu1st" rel="noopener noreferrer" target="_blank">
+          Book on Codementor
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built as a Codementor demo by Mihai Chindriș — vanilla HTML/CSS/JS, no build tools.</p>
+      <p class="footnote">Accessibility note: skip link, landmarks, labeled controls, and live region for checklist progress.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
